@@ -1,28 +1,27 @@
 {
   "name": "olx-clone",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "js-cookie": "^3.0.5",
+    "qs": "^6.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
-    "redux": "^4.2.1",
     "react-router-dom": "^6.22.3",
-    "styled-components": "^6.1.8",
-    "js-cookie": "^3.0.5",
-    "qs": "^6.12.0",
-  "react-slideshow-image": "^4.0.0"
-    
+    "react-slideshow-image": "^4.0.0",
+    "redux": "^4.2.1",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
-    "vite": "^4.4.9",
-    "@vitejs/plugin-react": "^4.1.0"
+    "@vitejs/plugin-react": "^4.1.0",
+    "vite": "^4.4.9"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   }
-  
 }

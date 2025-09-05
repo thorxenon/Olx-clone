@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { PageArea } from './styled';
 import useApi from '../../helpers/OlxAPI';
 import { PageContainer } from './../../components/MainComponents';
@@ -11,7 +11,7 @@ const Page = () =>{
 
     const api = useApi();
 
-    const history = useHistory();
+    const navigate = useNavigate();
     
     const useQueryString = () =>{
         return new URLSearchParams(useLocation().search);

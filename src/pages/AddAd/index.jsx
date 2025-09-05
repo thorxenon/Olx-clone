@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
-import MaskedInput from 'react-text-mask';
-import createNumberMask from 'text-mask-addons/dist/createNumberMask';
+import { useNavigate } from 'react-router-dom';
+// import MaskedInput from 'react-text-mask';
+// import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 import { PageArea } from './styled';
 import useApi from '../../helpers/OlxAPI';
 import { PageContainer, PageTitle, ErrorMessage } from './../../components/MainComponents';
@@ -11,7 +11,7 @@ const Page = () =>{
     const api = useApi();
 
     const fileField = useRef();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const [ categories, setCategories ] = useState();
 

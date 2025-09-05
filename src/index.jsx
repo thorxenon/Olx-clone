@@ -1,9 +1,10 @@
 import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
 import App from './App';
 import Reducers from './Reducers';
 import { createRoot } from 'react-dom/client';
 
-const store = createStore(Reducers);
+const store = configureStore({ reducer: Reducers });
 
 const container = document.getElementById('root');
 const root = createRoot(container);

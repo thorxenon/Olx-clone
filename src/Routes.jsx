@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import RouteHandler from './components/RouteHandler';
@@ -13,13 +12,13 @@ import Ads from './pages/Ads';
 import Account from './pages/Account';
 import Error404 from './pages/Error404';
 
-const Routes = () =>{
+const AppRoutes = () =>{
 
 
     return (
         <Routes>
             <Route path="/" element={<RouteHandler><Home /></RouteHandler>} />
-            <Route path="/about" element={<RouteHandler><About /></RouteHandler>} />
+            <Route path="/about" element={<About />} />
             <Route path="/signin" element={<RouteHandler><SignIn /></RouteHandler>} />
             <Route path="/signup" element={<RouteHandler><SignUp /></RouteHandler>} />
             <Route path="/ad/:id" element={<RouteHandler><AdPage /></RouteHandler>} />
@@ -31,4 +30,4 @@ const Routes = () =>{
     );
 }
 
-export default Routes;
+export default AppRoutes;

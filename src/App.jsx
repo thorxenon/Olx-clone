@@ -6,7 +6,7 @@ import './App.css';
 import { Template } from './components/MainComponents';
 import Header from './components/partials/Header';
 import Footer from './components/partials/Footer';
-import Routes from './Routes';
+import AppRoutes from './Routes';
 
 
 const Page = (props) =>{
@@ -15,7 +15,7 @@ const Page = (props) =>{
       <Template>
         <Header/>
 
-        <Routes/>
+              <AppRoutes/>
 
         <Footer/>
       </Template>
@@ -24,16 +24,4 @@ const Page = (props) =>{
 }
 
 
-const mapStateToProps = (state) =>{
-  return {
-    user:state.user
-  };
-};
-
-const mapDispatchToProps = (dispatch) =>{
-  return{
-    
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
+export default Page;

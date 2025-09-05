@@ -1,20 +1,13 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { isLogged } from './../helpers/AuthHandler';
 
-
-export default ({children, ...rest}) =>{
-
-    let logged = isLogged();
-
-    let authorized = (rest.private && !logged) ? false : true;
-
-    return(
-        <Route
-            {...rest}
-            render={()=>
-                authorized ? children : <Redirect to='/signin'/>
-            }
-        />
-    );
+const RouteHandler = ({ children, private: isPrivate }) => {
+    const logged = isLogged();
+    if (isPrivate && !logged) {
+        return <Navigate to="/signin" replace />;
+    }
+    return children;
 };
+
+export default RouteHandler;
